@@ -69,7 +69,7 @@ namespace TicTacToe_DylanAbeyta
             } while (true);
         }
 
-        static void intro(string[,] array)
+        static void Intro(string[,] array)
         {
             Console.WriteLine("Welcome to Tic Tac Toe, you are X's and i am O's");
             for (int i = 0; i < 3; i++)
@@ -81,7 +81,7 @@ namespace TicTacToe_DylanAbeyta
             }
         }
         
-        static int evaluate(string[,] array)
+        static int Evaluate(string[,] array)
         {
 
             if (array[0, 0] == "X" && array[0, 1] == "X" && array[0, 2] == "X" ||
@@ -122,7 +122,7 @@ namespace TicTacToe_DylanAbeyta
 
             return 1;
         }
-        static void print(string[,] array)
+        static void Print(string[,] array)
         {
             for (int i = 0; i < 3; i++)
             {
