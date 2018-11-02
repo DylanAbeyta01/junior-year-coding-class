@@ -1,0 +1,7 @@
+C:\Users\185236\OneDrive\2DArray_DylanAbeyta\2DArray_DylanAbeyta\bin\Debug\2DArray_DylanAbeyta.exe.config
+C:\Users\185236\OneDrive\2DArray_DylanAbeyta\2DArray_DylanAbeyta\bin\Debug\2DArray_DylanAbeyta.exe
+C:\Users\185236\OneDrive\2DArray_DylanAbeyta\2DArray_DylanAbeyta\bin\Debug\2DArray_DylanAbeyta.pdb
+C:\Users\185236\OneDrive\2DArray_DylanAbeyta\2DArray_DylanAbeyta\obj\Debug\2DArray_DylanAbeyta.csprojAssemblyReference.cache
+C:\Users\185236\OneDrive\2DArray_DylanAbeyta\2DArray_DylanAbeyta\obj\Debug\2DArray_DylanAbeyta.csproj.CoreCompileInputs.cache
+C:\Users\185236\OneDrive\2DArray_DylanAbeyta\2DArray_DylanAbeyta\obj\Debug\2DArray_DylanAbeyta.exe
+C:\Users\185236\OneDrive\2DArray_DylanAbeyta\2DArray_DylanAbeyta\obj\Debug\2DArray_DylanAbeyta.pdb

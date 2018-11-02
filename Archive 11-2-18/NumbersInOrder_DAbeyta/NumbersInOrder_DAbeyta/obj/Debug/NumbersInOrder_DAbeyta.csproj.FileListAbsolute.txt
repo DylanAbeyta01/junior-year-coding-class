@@ -1,0 +1,7 @@
+C:\Users\185236\OneDrive\NumbersInOrder_DAbeyta\NumbersInOrder_DAbeyta\bin\Debug\NumbersInOrder_DAbeyta.exe.config
+C:\Users\185236\OneDrive\NumbersInOrder_DAbeyta\NumbersInOrder_DAbeyta\bin\Debug\NumbersInOrder_DAbeyta.exe
+C:\Users\185236\OneDrive\NumbersInOrder_DAbeyta\NumbersInOrder_DAbeyta\bin\Debug\NumbersInOrder_DAbeyta.pdb
+C:\Users\185236\OneDrive\NumbersInOrder_DAbeyta\NumbersInOrder_DAbeyta\obj\Debug\NumbersInOrder_DAbeyta.csprojAssemblyReference.cache
+C:\Users\185236\OneDrive\NumbersInOrder_DAbeyta\NumbersInOrder_DAbeyta\obj\Debug\NumbersInOrder_DAbeyta.csproj.CoreCompileInputs.cache
+C:\Users\185236\OneDrive\NumbersInOrder_DAbeyta\NumbersInOrder_DAbeyta\obj\Debug\NumbersInOrder_DAbeyta.exe
+C:\Users\185236\OneDrive\NumbersInOrder_DAbeyta\NumbersInOrder_DAbeyta\obj\Debug\NumbersInOrder_DAbeyta.pdb

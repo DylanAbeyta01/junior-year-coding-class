@@ -1,0 +1,13 @@
+C:\Users\185236\Desktop\DAbeyta_Palindrone2\DAbeyta_Palindrone2\bin\Debug\DAbeyta_Palindrone2.exe.config
+C:\Users\185236\Desktop\DAbeyta_Palindrone2\DAbeyta_Palindrone2\bin\Debug\DAbeyta_Palindrone2.exe
+C:\Users\185236\Desktop\DAbeyta_Palindrone2\DAbeyta_Palindrone2\bin\Debug\DAbeyta_Palindrone2.pdb
+C:\Users\185236\Desktop\DAbeyta_Palindrone2\DAbeyta_Palindrone2\obj\Debug\DAbeyta_Palindrone2.csproj.CoreCompileInputs.cache
+C:\Users\185236\Desktop\DAbeyta_Palindrone2\DAbeyta_Palindrone2\obj\Debug\DAbeyta_Palindrone2.exe
+C:\Users\185236\Desktop\DAbeyta_Palindrone2\DAbeyta_Palindrone2\obj\Debug\DAbeyta_Palindrone2.pdb
+C:\Users\185236\OneDrive\DAbeyta_Palindrone2\DAbeyta_Palindrone2\bin\Debug\DAbeyta_Palindrone2.exe.config
+C:\Users\185236\OneDrive\DAbeyta_Palindrone2\DAbeyta_Palindrone2\bin\Debug\DAbeyta_Palindrone2.exe
+C:\Users\185236\OneDrive\DAbeyta_Palindrone2\DAbeyta_Palindrone2\bin\Debug\DAbeyta_Palindrone2.pdb
+C:\Users\185236\OneDrive\DAbeyta_Palindrone2\DAbeyta_Palindrone2\obj\Debug\DAbeyta_Palindrone2.csprojAssemblyReference.cache
+C:\Users\185236\OneDrive\DAbeyta_Palindrone2\DAbeyta_Palindrone2\obj\Debug\DAbeyta_Palindrone2.csproj.CoreCompileInputs.cache
+C:\Users\185236\OneDrive\DAbeyta_Palindrone2\DAbeyta_Palindrone2\obj\Debug\DAbeyta_Palindrone2.exe
+C:\Users\185236\OneDrive\DAbeyta_Palindrone2\DAbeyta_Palindrone2\obj\Debug\DAbeyta_Palindrone2.pdb

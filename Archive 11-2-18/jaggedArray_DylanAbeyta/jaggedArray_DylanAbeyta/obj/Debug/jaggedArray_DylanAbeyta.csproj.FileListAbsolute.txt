@@ -1,0 +1,6 @@
+C:\Users\185236\OneDrive\jaggedArray_DylanAbeyta\jaggedArray_DylanAbeyta\obj\Debug\jaggedArray_DylanAbeyta.csproj.CoreCompileInputs.cache
+C:\Users\185236\OneDrive\jaggedArray_DylanAbeyta\jaggedArray_DylanAbeyta\bin\Debug\jaggedArray_DylanAbeyta.exe.config
+C:\Users\185236\OneDrive\jaggedArray_DylanAbeyta\jaggedArray_DylanAbeyta\bin\Debug\jaggedArray_DylanAbeyta.exe
+C:\Users\185236\OneDrive\jaggedArray_DylanAbeyta\jaggedArray_DylanAbeyta\bin\Debug\jaggedArray_DylanAbeyta.pdb
+C:\Users\185236\OneDrive\jaggedArray_DylanAbeyta\jaggedArray_DylanAbeyta\obj\Debug\jaggedArray_DylanAbeyta.exe
+C:\Users\185236\OneDrive\jaggedArray_DylanAbeyta\jaggedArray_DylanAbeyta\obj\Debug\jaggedArray_DylanAbeyta.pdb

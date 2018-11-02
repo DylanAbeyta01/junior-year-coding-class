@@ -1,0 +1,7 @@
+C:\Users\185236\OneDrive\division_DAbeyta\division_DAbeyta\bin\Debug\division_DAbeyta.exe.config
+C:\Users\185236\OneDrive\division_DAbeyta\division_DAbeyta\bin\Debug\division_DAbeyta.exe
+C:\Users\185236\OneDrive\division_DAbeyta\division_DAbeyta\bin\Debug\division_DAbeyta.pdb
+C:\Users\185236\OneDrive\division_DAbeyta\division_DAbeyta\obj\Debug\division_DAbeyta.csprojAssemblyReference.cache
+C:\Users\185236\OneDrive\division_DAbeyta\division_DAbeyta\obj\Debug\division_DAbeyta.csproj.CoreCompileInputs.cache
+C:\Users\185236\OneDrive\division_DAbeyta\division_DAbeyta\obj\Debug\division_DAbeyta.exe
+C:\Users\185236\OneDrive\division_DAbeyta\division_DAbeyta\obj\Debug\division_DAbeyta.pdb
