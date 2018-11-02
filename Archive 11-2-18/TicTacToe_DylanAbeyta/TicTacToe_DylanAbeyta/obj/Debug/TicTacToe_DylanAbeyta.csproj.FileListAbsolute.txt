@@ -1,7 +1,0 @@
-C:\Users\185236\OneDrive\TicTacToe_DylanAbeyta\TicTacToe_DylanAbeyta\bin\Debug\TicTacToe_DylanAbeyta.exe.config
-C:\Users\185236\OneDrive\TicTacToe_DylanAbeyta\TicTacToe_DylanAbeyta\bin\Debug\TicTacToe_DylanAbeyta.exe
-C:\Users\185236\OneDrive\TicTacToe_DylanAbeyta\TicTacToe_DylanAbeyta\bin\Debug\TicTacToe_DylanAbeyta.pdb
-C:\Users\185236\OneDrive\TicTacToe_DylanAbeyta\TicTacToe_DylanAbeyta\obj\Debug\TicTacToe_DylanAbeyta.csprojAssemblyReference.cache
-C:\Users\185236\OneDrive\TicTacToe_DylanAbeyta\TicTacToe_DylanAbeyta\obj\Debug\TicTacToe_DylanAbeyta.csproj.CoreCompileInputs.cache
-C:\Users\185236\OneDrive\TicTacToe_DylanAbeyta\TicTacToe_DylanAbeyta\obj\Debug\TicTacToe_DylanAbeyta.exe
-C:\Users\185236\OneDrive\TicTacToe_DylanAbeyta\TicTacToe_DylanAbeyta\obj\Debug\TicTacToe_DylanAbeyta.pdb
