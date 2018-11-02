@@ -15,12 +15,12 @@ namespace TicTacToe_DylanAbeyta
             string[,] array = new string[3, 3];
             int num = 0;
 
-            intro(array);
+            Intro(array);
             do
             {
                 num = 1;
                 ProcessTurn(array, 'X');
-                num = evaluate(array);
+                num = Evaluate(array);
                 
                 if (num == 3)
                 {
@@ -28,7 +28,7 @@ namespace TicTacToe_DylanAbeyta
                 }
 
                 ProcessTurn(array, 'O');
-                num = evaluate(array);
+                num = Evaluate(array);
                 
             } while (num == 2);
             if (num == 2)
@@ -64,7 +64,7 @@ namespace TicTacToe_DylanAbeyta
                     continue;
                 }
                 array[x, y] = player.ToString();
-                print(array);
+                Print(array);
                 break;
             } while (true);
         }
