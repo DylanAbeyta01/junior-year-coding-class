@@ -122,6 +122,11 @@ namespace TicTacToe_DylanAbeyta
 
             return 1;
         }
+
+        /// <summary>
+        /// kjghjh
+        /// </summary>
+        /// <param name="array"></param>
         static void Print(string[,] array)
         {
             for (int i = 0; i < 3; i++)
