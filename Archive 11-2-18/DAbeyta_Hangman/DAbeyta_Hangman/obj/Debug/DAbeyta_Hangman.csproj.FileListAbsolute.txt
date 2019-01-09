@@ -1,7 +1,0 @@
-C:\Users\185236\OneDrive\DAbeyta_Hangman\DAbeyta_Hangman\bin\Debug\DAbeyta_Hangman.exe.config
-C:\Users\185236\OneDrive\DAbeyta_Hangman\DAbeyta_Hangman\bin\Debug\DAbeyta_Hangman.exe
-C:\Users\185236\OneDrive\DAbeyta_Hangman\DAbeyta_Hangman\bin\Debug\DAbeyta_Hangman.pdb
-C:\Users\185236\OneDrive\DAbeyta_Hangman\DAbeyta_Hangman\obj\Debug\DAbeyta_Hangman.csprojAssemblyReference.cache
-C:\Users\185236\OneDrive\DAbeyta_Hangman\DAbeyta_Hangman\obj\Debug\DAbeyta_Hangman.csproj.CoreCompileInputs.cache
-C:\Users\185236\OneDrive\DAbeyta_Hangman\DAbeyta_Hangman\obj\Debug\DAbeyta_Hangman.exe
-C:\Users\185236\OneDrive\DAbeyta_Hangman\DAbeyta_Hangman\obj\Debug\DAbeyta_Hangman.pdb

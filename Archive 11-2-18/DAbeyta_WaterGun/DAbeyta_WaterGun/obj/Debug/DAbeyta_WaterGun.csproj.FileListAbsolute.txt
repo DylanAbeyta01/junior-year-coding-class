@@ -1,2 +1,0 @@
-C:\Users\185236\OneDrive\DAbeyta_WaterGun\DAbeyta_WaterGun\obj\Debug\DAbeyta_WaterGun.csprojAssemblyReference.cache
-C:\Users\185236\OneDrive\DAbeyta_WaterGun\DAbeyta_WaterGun\obj\Debug\DAbeyta_WaterGun.csproj.CoreCompileInputs.cache

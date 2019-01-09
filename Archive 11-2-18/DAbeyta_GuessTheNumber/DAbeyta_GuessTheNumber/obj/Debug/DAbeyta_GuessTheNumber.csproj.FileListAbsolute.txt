@@ -1,7 +1,0 @@
-C:\Users\185236\OneDrive\DAbeyta_GuessTheNumber\DAbeyta_GuessTheNumber\bin\Debug\DAbeyta_GuessTheNumber.exe.config
-C:\Users\185236\OneDrive\DAbeyta_GuessTheNumber\DAbeyta_GuessTheNumber\bin\Debug\DAbeyta_GuessTheNumber.exe
-C:\Users\185236\OneDrive\DAbeyta_GuessTheNumber\DAbeyta_GuessTheNumber\bin\Debug\DAbeyta_GuessTheNumber.pdb
-C:\Users\185236\OneDrive\DAbeyta_GuessTheNumber\DAbeyta_GuessTheNumber\obj\Debug\DAbeyta_GuessTheNumber.csprojAssemblyReference.cache
-C:\Users\185236\OneDrive\DAbeyta_GuessTheNumber\DAbeyta_GuessTheNumber\obj\Debug\DAbeyta_GuessTheNumber.csproj.CoreCompileInputs.cache
-C:\Users\185236\OneDrive\DAbeyta_GuessTheNumber\DAbeyta_GuessTheNumber\obj\Debug\DAbeyta_GuessTheNumber.exe
-C:\Users\185236\OneDrive\DAbeyta_GuessTheNumber\DAbeyta_GuessTheNumber\obj\Debug\DAbeyta_GuessTheNumber.pdb

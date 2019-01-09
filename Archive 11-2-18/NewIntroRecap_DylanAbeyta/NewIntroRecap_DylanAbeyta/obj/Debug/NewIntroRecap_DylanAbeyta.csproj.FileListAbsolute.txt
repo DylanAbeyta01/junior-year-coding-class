@@ -1,7 +1,0 @@
-C:\Users\185236\OneDrive\NewIntroRecap_DylanAbeyta\NewIntroRecap_DylanAbeyta\obj\Debug\NewIntroRecap_DylanAbeyta.csprojAssemblyReference.cache
-C:\Users\185236\OneDrive\NewIntroRecap_DylanAbeyta\NewIntroRecap_DylanAbeyta\obj\Debug\NewIntroRecap_DylanAbeyta.csproj.CoreCompileInputs.cache
-C:\Users\185236\OneDrive\NewIntroRecap_DylanAbeyta\NewIntroRecap_DylanAbeyta\bin\Debug\NewIntroRecap_DylanAbeyta.exe.config
-C:\Users\185236\OneDrive\NewIntroRecap_DylanAbeyta\NewIntroRecap_DylanAbeyta\bin\Debug\NewIntroRecap_DylanAbeyta.exe
-C:\Users\185236\OneDrive\NewIntroRecap_DylanAbeyta\NewIntroRecap_DylanAbeyta\bin\Debug\NewIntroRecap_DylanAbeyta.pdb
-C:\Users\185236\OneDrive\NewIntroRecap_DylanAbeyta\NewIntroRecap_DylanAbeyta\obj\Debug\NewIntroRecap_DylanAbeyta.exe
-C:\Users\185236\OneDrive\NewIntroRecap_DylanAbeyta\NewIntroRecap_DylanAbeyta\obj\Debug\NewIntroRecap_DylanAbeyta.pdb

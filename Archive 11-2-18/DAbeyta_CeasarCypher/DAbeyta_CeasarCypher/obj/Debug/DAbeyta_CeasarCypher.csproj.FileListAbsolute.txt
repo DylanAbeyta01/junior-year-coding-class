@@ -1,7 +1,0 @@
-C:\Users\185236\OneDrive\DAbeyta_CeasarCypher\DAbeyta_CeasarCypher\bin\Debug\DAbeyta_CeasarCypher.exe.config
-C:\Users\185236\OneDrive\DAbeyta_CeasarCypher\DAbeyta_CeasarCypher\bin\Debug\DAbeyta_CeasarCypher.exe
-C:\Users\185236\OneDrive\DAbeyta_CeasarCypher\DAbeyta_CeasarCypher\bin\Debug\DAbeyta_CeasarCypher.pdb
-C:\Users\185236\OneDrive\DAbeyta_CeasarCypher\DAbeyta_CeasarCypher\obj\Debug\DAbeyta_CeasarCypher.csprojAssemblyReference.cache
-C:\Users\185236\OneDrive\DAbeyta_CeasarCypher\DAbeyta_CeasarCypher\obj\Debug\DAbeyta_CeasarCypher.csproj.CoreCompileInputs.cache
-C:\Users\185236\OneDrive\DAbeyta_CeasarCypher\DAbeyta_CeasarCypher\obj\Debug\DAbeyta_CeasarCypher.exe
-C:\Users\185236\OneDrive\DAbeyta_CeasarCypher\DAbeyta_CeasarCypher\obj\Debug\DAbeyta_CeasarCypher.pdb

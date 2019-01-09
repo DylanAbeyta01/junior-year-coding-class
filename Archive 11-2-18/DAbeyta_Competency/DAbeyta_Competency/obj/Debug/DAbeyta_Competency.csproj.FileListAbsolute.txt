@@ -1,7 +1,0 @@
-C:\Users\185236\OneDrive\DAbeyta_Competency\DAbeyta_Competency\bin\Debug\DAbeyta_Competency.exe.config
-C:\Users\185236\OneDrive\DAbeyta_Competency\DAbeyta_Competency\bin\Debug\DAbeyta_Competency.exe
-C:\Users\185236\OneDrive\DAbeyta_Competency\DAbeyta_Competency\bin\Debug\DAbeyta_Competency.pdb
-C:\Users\185236\OneDrive\DAbeyta_Competency\DAbeyta_Competency\obj\Debug\DAbeyta_Competency.csprojAssemblyReference.cache
-C:\Users\185236\OneDrive\DAbeyta_Competency\DAbeyta_Competency\obj\Debug\DAbeyta_Competency.csproj.CoreCompileInputs.cache
-C:\Users\185236\OneDrive\DAbeyta_Competency\DAbeyta_Competency\obj\Debug\DAbeyta_Competency.exe
-C:\Users\185236\OneDrive\DAbeyta_Competency\DAbeyta_Competency\obj\Debug\DAbeyta_Competency.pdb
