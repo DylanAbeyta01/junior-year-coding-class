@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace InheritanceDiagram_DylanAbeyta
 {
-    class Basketball : Athletic
+    class Boots : Casual
     {
-        protected bool ankleSupport;
+        protected bool thick;
 
-        public Basketball (bool ankleSupport, string brand, string color, string material, int size, bool goodGrip, bool breathable)
-            :base (brand, color, material, size, goodGrip, breathable)
+        public Boots(bool thick, string brand, string color, string material, int size, bool slipOn)
+            : base(brand, color, material, size, slipOn)
         {
-            this.ankleSupport = ankleSupport; 
+            this.thick = thick;
         }
 
         public override void PrintShoes()
         {
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine("You have ankle support: " + ankleSupport);
-            Console.WriteLine("         Ankel support is good to remain injury free");
+            Console.WriteLine("The boots are thick: " + thick);
+            Console.WriteLine("         Thick boots are good because boot are usually used for hiking and outdoors activities and thick shoes are good to protect your feet.");
             Console.WriteLine("What is your brand: " + brand);
             Console.WriteLine("         A brand makes certain types of shoes and has different qualities.");
             Console.WriteLine("What color is your shoe: " + color);
@@ -30,10 +30,9 @@ namespace InheritanceDiagram_DylanAbeyta
             Console.WriteLine("         different materials are good for different styles.");
             Console.WriteLine("What size: " + size);
             Console.WriteLine("         size is important because if you get the wrong size then the shoe won't fit.");
-            Console.WriteLine("You have good grip: " + goodGrip);
-            Console.WriteLine("         Good grip is good for running so you can stop and run faster.");
-            Console.WriteLine("The is shoe breathable: " + breathable);
-            Console.WriteLine("         a shoe that is breathable is good for running so you are sweating in your shoes.");
+            Console.WriteLine("Shoes are slip ons: " + slipOn);
+            Console.WriteLine("         Slip on shoes are more convenient when putting your shoes on.");
+
         }
     }
 }

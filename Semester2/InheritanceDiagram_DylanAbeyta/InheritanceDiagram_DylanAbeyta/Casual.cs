@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InheritanceDiagram_DylanAbeyta
 {
-    class Casual : Shoes
+    abstract class Casual : Shoes
     {
         protected bool slipOn;
 
@@ -15,5 +15,9 @@ namespace InheritanceDiagram_DylanAbeyta
         {
             this.slipOn = slipOn;
         }
+      
+        public override abstract void PrintShoes();
+        
+              
     }
 }

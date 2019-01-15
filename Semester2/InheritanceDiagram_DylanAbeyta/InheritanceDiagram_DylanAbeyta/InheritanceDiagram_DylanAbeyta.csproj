@@ -45,7 +45,9 @@
   <ItemGroup>
     <Compile Include="Athletic.cs" />
     <Compile Include="Basketball.cs" />
+    <Compile Include="Boots.cs" />
     <Compile Include="Casual.cs" />
+    <Compile Include="DressShoe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Running.cs" />

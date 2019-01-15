@@ -19,5 +19,9 @@ namespace InheritanceDiagram_DylanAbeyta
             this.material = material;
             this.size = size;
         }
+
+        public abstract void PrintShoes();
+                  
+       
     }
 }

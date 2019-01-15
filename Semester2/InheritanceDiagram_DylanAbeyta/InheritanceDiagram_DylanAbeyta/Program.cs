@@ -10,9 +10,18 @@ namespace InheritanceDiagram_DylanAbeyta
     {
         static void Main(string[] args)
         {
-            List<Shoes> shoe = new List<Shoes>();
+            Console.WriteLine("press any key to see the shoes");
 
-            shoe.Add(new ());
+            List<Shoes> shoe = new List<Shoes>();
+            shoe.Add(new Basketball(true, "jordans", "red", "lether", 12, true, true));
+            shoe.Add(new Running(true, "asics", "blue", "polyurethane", 10, true, true));
+            shoe.Add(new DressShoe(true, "ModClothe", "black", "rubber", 11, false));
+            shoe.Add(new Boots(true, "tecovas", "brown", "leather", 9, false));
+            for (int i = 0; i < shoe.Count; i++)
+            {
+                shoe[i].PrintShoes();
+            }
+            Console.ReadKey();
         }
     }
 }
