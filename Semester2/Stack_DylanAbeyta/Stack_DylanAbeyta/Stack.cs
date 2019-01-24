@@ -24,6 +24,7 @@ namespace Stack_DylanAbeyta
         //Pop
         public int Pop()
         {
+
             if (holder[0] == null)
             {
                 Console.WriteLine("there are no numbers in the list. Press 1 and push a value.");

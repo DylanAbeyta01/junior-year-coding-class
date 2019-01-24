@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace DeckOfCards_DylanAbeyta
 {
     enum Face { Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace }
-    enum Suit { Hearts, Diamonds, Spades, Clubs}
+    enum Suit { Hearts, Diamonds, Spades, Clubs }
 
     class Card
-    {               
+    {
         public static Dictionary<Face, int> CardValues = new Dictionary<Face, int>()
         {
             {Face.Two, 2 },
@@ -28,8 +28,8 @@ namespace DeckOfCards_DylanAbeyta
             {Face.Ace, 14 },
 
         };
-        private Suit suit;
-        private Face face;
+        public Suit suit;
+        public Face face;
 
         public Card(Suit suit, Face face)
         {
@@ -37,13 +37,37 @@ namespace DeckOfCards_DylanAbeyta
             this.face = face;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns>-1 if other is better
+        /// 1 if this is better
+        /// 0 if equal
+        /// </returns>
+        public int Compare(Card other)
+        {
+            if (CardValues[this.face] < CardValues[other.face])
+            {
+                return -1;
+            }
+            if (CardValues[this.face] > CardValues[other.face])
+            {
+                return 1;
+            }
+            if (CardValues[this.face] == CardValues[other.face])
+            {
+                return 2;
+            }
+            return 0;
+        }
+
         public void print()
         {
-            string SymbolOC = null;
-                Console.WriteLine("---------------------------");
-                Console.WriteLine("|   " + SymbolOC + "  |");
-                Console.WriteLine("---------------------------");
-            
+            Console.WriteLine("             ---------------------------");
+            Console.WriteLine("             |   " + face + " of " + suit + "  |");
+            Console.WriteLine("             ---------------------------");
+
         }
 
     }
