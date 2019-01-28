@@ -21,7 +21,8 @@ namespace Queue_DylanAbeyta
                 Console.WriteLine("** 3) Peek");
                 Console.WriteLine("** 4) Print");
                 Console.WriteLine("** 5) search");
-                Console.WriteLine("** 6) quit");
+                Console.WriteLine("** 6) clear screen");
+                Console.WriteLine("** 7) quit");
                 Console.WriteLine("***************");
                 input = int.Parse(Console.ReadLine());
 
@@ -66,11 +67,16 @@ namespace Queue_DylanAbeyta
                     }
                     else
                         Console.WriteLine("your number is in the " + num + " place");
-
-
                 }
 
-            } while (input != 6);
+                if (input == 6)
+                {
+                    // 
+                    myQueue.Clear();
+                }
+                        
+
+            } while (input != 7);
             Console.ReadKey();
         }
     }
