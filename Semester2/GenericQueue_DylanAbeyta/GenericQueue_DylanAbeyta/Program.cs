@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Queue_DylanAbeyta
+namespace GenericQueue_DylanAbeyta
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Queue myQueue = new Queue();
+            GenericQueue<int> myQueue = new GenericQueue<int>();
 
             int input;
             do
@@ -40,8 +40,8 @@ namespace Queue_DylanAbeyta
                     {
                         Console.WriteLine("there are no numbers in the list. Press 1 and DeQueue a value.");
                     }
-                   else         
-                    Console.WriteLine("Number removed: " + temp);
+                    else
+                        Console.WriteLine("Number removed: " + temp);
                 }
 
                 if (input == 3)
@@ -66,10 +66,11 @@ namespace Queue_DylanAbeyta
                     }
                     else
                         Console.WriteLine("your number is in the " + num + " place");
-                }                                      
+                }
 
             } while (input != 6);
             Console.ReadKey();
+
         }
     }
 }
