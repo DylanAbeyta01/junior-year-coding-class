@@ -9,10 +9,19 @@ namespace CountingCoins_DylanAbeyta
 {
     class Program
     {
+        static int startInt = 0;
+        static int temp = 0;
         static List<string> file = new List<string>();
+
         static void Main(string[] args)
         {
             float moneyAmount = 0f;
+            float qMoney = 0f;
+            float dMoney = 0f;
+            float nMoney = 0f;
+            float pMoney = 0f;
+            float hMoney = 0f;
+
 
             string path1 = AppDomain.CurrentDomain.BaseDirectory + @"Prob01.in_.txt";
 
@@ -34,58 +43,57 @@ namespace CountingCoins_DylanAbeyta
             {
                 if (file[i].Contains("PENNY"))
                 {
-                    Console.WriteLine("p");
+                    startInt = 6;
+                    temp = intFinder(file[i], startInt);                
+                    pMoney = temp * .01f;
+                    moneyAmount += pMoney;
                 }
 
                 if (file[i].Contains("NICKEL"))
                 {
-                    Console.WriteLine("n");
-
+                    startInt = 7;
+                    temp = intFinder(file[i], startInt);
+                    nMoney = temp * .05f;
+                    moneyAmount += nMoney;
                 }
 
                 if (file[i].Contains("DIME"))
                 {
-                    Console.WriteLine("d");
+                    startInt = 5;
+                    temp = intFinder(file[i], startInt);
+                    dMoney = temp * .1f;
+                    moneyAmount += dMoney;
 
                 }
 
                 if (file[i].Contains("QUARTER"))
                 {
-                    Console.WriteLine("q");
+                    startInt = 8;
+                    temp = intFinder(file[i], startInt);
+                    qMoney = temp * .25f;
+                    moneyAmount += qMoney;
 
                 }
 
                 if (file[i].Contains("HALFDOLLAR"))
                 {
-                    Console.WriteLine("h");
-
+                    startInt = 11;
+                    temp = intFinder(file[i], startInt);
+                    hMoney = temp * .50f;
+                    moneyAmount += hMoney;
                 }
-
-
             }
-
-
-
-
+            Console.WriteLine();
+            Console.WriteLine("Total Money Of Amount: $" + moneyAmount.ToString("0.00"));
             Console.ReadLine();
         }
 
-        static int intFinder()
+        //this makes it so the only thing read is are the intergers
+        static int intFinder(string file, int startInt)
         {
-            int temp = 0;
+            temp = 0;
 
-            for (int i = 0; i < file.Count; i++)
-            {
-                for (int j = 0; j < file[i].Length; j++)
-                {
-                    if (int.TryParse(file[i][j].ToString, out ) == true)
-                    {
-                        file[i].Remove(file[j]);
-                        temp = int.Parse(file[i]);
-                    }
-                }
-            }
-
+            temp = int.Parse(file.Substring(startInt));
 
             return temp;
         }
