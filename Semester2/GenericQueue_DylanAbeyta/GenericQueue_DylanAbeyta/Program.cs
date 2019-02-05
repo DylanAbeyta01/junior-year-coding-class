@@ -11,6 +11,14 @@ namespace GenericQueue_DylanAbeyta
         static void Main(string[] args)
         {
             GenericQueue<int> myQueue = new GenericQueue<int>();
+            GenericQueue<Currencies> currencies = new GenericQueue<Currencies>();
+
+            Random rand = new Random();
+
+            for (int i = 0; i < 10; i++)
+            {
+                currencies.EnQueue(new currencies(rand.Next(0, 100), rand.Next(0, 100)));
+            }
 
             int input;
             do
