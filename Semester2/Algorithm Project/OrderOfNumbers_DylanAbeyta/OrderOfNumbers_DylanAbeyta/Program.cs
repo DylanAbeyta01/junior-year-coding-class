@@ -12,14 +12,10 @@ namespace OrderOfNumbers_DylanAbeyta
         static void Main(string[] args)
         {
             string line;
-            int result;
-            bool Valid = true;
-            
+            int result;                       
 
             List<List<int>> file = new List<List<int>>();
-            List<string> num = new List<string>();
             List<string> strings = new List<string>();
-
 
             string path2 = AppDomain.CurrentDomain.BaseDirectory + @"Prob02.in_.txt";
 
@@ -27,9 +23,11 @@ namespace OrderOfNumbers_DylanAbeyta
             {
 
                 while ((line = sr.ReadLine()) != null)
-                {
+                {                   
                     strings = line.Split(' ').ToList();
+                    bool valid = true;
                     List<int> ints = new List<int>();
+
                     for (int i = 0; i < strings.Count; i++)
                     {
                         if (int.TryParse(strings[i], out result) == true)
@@ -37,32 +35,52 @@ namespace OrderOfNumbers_DylanAbeyta
                             ints.Add(int.Parse(strings[i]));
                         }
                         else
-                            Valid = false;
+                        {
+                            Console.WriteLine("input was invalid");
+                            valid = false;
+                        }                            
                     }
-                    file.Add(ints);
-                }
-            }
-
-            for (int i = 0; i < file.Count; i++)
-            {
-                Console.WriteLine(file[i]);
-            }
-
-            for (int i = 0; i < num.Count; i++)
-            {
-                for (int j = 0; j < num[i].Length; j++)
-                {
-                    if (num[i][j] > num[i][j + 1] || num[i][j] == num[i][j + 1])
+                    
+                    if (valid == true)
                     {
-                        Console.WriteLine("it is ascending");
-                    }
+                        bool Acc = true;
+                        bool Decc = true;
 
-                    if (num[i][j] < num[i][j + 1] || num[i][j] == num[i][j + 1])
-                    {
-                        Console.WriteLine("it is desending");
+                        for (int i = 1; i < ints.Count; i++)
+                        {
+                            if (ints[i - 1] > ints[i])
+                            {
+                                Acc = false;
+                                break;
+                            }     
+                        }
+
+                        for (int i = 1; i < ints.Count; i++)
+                        {
+                            if (ints[i - 1] < ints[i])
+                            {
+                                Decc = false;
+                                break;
+                            }
+                        }
+
+                        if (Acc == true)
+                        {
+                            Console.WriteLine("is Accending");
+                        }
+
+                        if (Decc == true)
+                        {
+                            Console.WriteLine("is Deccending");
+                        }
+
+                        if (Decc == false && Acc == false && valid == true)
+                        {
+                            Console.WriteLine("the order is random");
+                        }
                     }
                 }
-            }
+            }          
             Console.ReadLine();
         }
     }
