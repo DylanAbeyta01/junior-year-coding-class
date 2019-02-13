@@ -27,16 +27,16 @@ namespace DecodingMessage_DylanAbeyta
 
                 while ((line = sr.ReadLine()) != null)
                 {
-                  string[] x = line.Split(' ');
-                    for (int i = 0; i < x.Length; i++)
+                    List<string> x = line.Split(' ').ToList();
+                    for (int i = 0; i < x.Count; i++)
                     {
                         string[] number = x[i].Split('-');
                         for (int j = 0; j < number.Length; j++)
                         {
                             Console.Write(number[j]);
                         }
-                    }                                   
-
+                    }
+                    Console.WriteLine();
                     for (int i = 0; i < strings.Count; i++)
                     {
                         ints.Add(int.Parse(strings[i]));
@@ -46,7 +46,7 @@ namespace DecodingMessage_DylanAbeyta
                 for (int i = 0; i < key.Count; i++)
                 {
                     counter.Add(key[i]);
-                    Console.WriteLine(counter[i]);
+                    Console.Write(counter[i]);
                 }                              
             }
             Console.ReadLine();
