@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +9,8 @@ namespace Sudoku
 {
     public class SudokuBoard
     {
+        List<string> boards = new List<string>();
+        string newBoard;
         /// <summary>
         /// Most recent row and most recent column, used for coloring the board
         /// </summary>
@@ -27,7 +29,7 @@ namespace Sudoku
         {
             Board = new int[9, 9] {
                 {0,0,0,2,6,0,7,0,1 },
-                {6,8,0,0,7,0,0,9,0 },
+                {6,8,0,0,7,0,0,9,0},
                 {1,9,0,0,0,4,5,0,0 },
                 {8,2,0,1,0,0,0,4,0 },
                 {0,0,4,6,0,2,9,0,0 },
@@ -49,7 +51,19 @@ namespace Sudoku
         /// <param name="fileName">Name of the file you want to load</param>
         public SudokuBoard(string fileName)
         {
-            throw new NotImplementedException();
+            string path3 = AppDomain.CurrentDomain.BaseDirectory + @"HardPuzzles.txt";
+
+            using (StreamReader sr = new StreamReader(path3))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    boards.Add(line);
+                }
+                Random rand = new Random();
+                newBoard = boards[rand.Next(0, 95)];
+                PrintBoard();
+            }
         }
 
 
@@ -69,13 +83,72 @@ namespace Sudoku
         /// </returns>
         public bool VerifyBoard()
         {
-            throw new NotImplementedException();
+            List<int> Num = new List<int>();
 
-            //Check all columns in the board, make sure they contain ONLY values 1-9. No duplicates, no exclusions
+            bool verify = true;
+
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    if (Board[i, j] == '0')
+                    {
+                        verify = false;
+                        return verify;
+                    }
+                }
+            }
+
+            //Check all columns in the board, make sure they contain ONLY values 1-9. No duplicates, no exclusions      
+            for (int k = 0; k < 9; k++)
+            {
+                Num.Clear();
+                for (int j = 0; j < 9; j++)
+                {
+                    Num.Add(Board[k, j]);
+
+                }
+                Num = Num.OrderBy(t => t).ToList();
+
+                for (int j = 0; j < 9; j++)
+                {
+                    for (int i = 1; i <= 9; i++)
+                    {
+                        if (Board[k, j] != i)
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
 
             //Check all rows in the board, make sure they contain ONLY values 1-9. No duplicates, no exclusions
+            for (int k = 0; k < 9; k++)
+            {
+                Num.Clear();
+                for (int j = 0; j < 9; j++)
+                {
+                    Num.Add(Board[j, k]);
+
+                }
+                Num = Num.OrderBy(t => t).ToList();
+
+                for (int j = 0; j < 9; j++)
+                {
+                    for (int i = 1; i <= 9; i++)
+                    {
+                        if (Board[j, k] != i)
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
 
             //Check all boxes in the board, make sure they contain ONLY values 1-9. No duplicates, no exclusions
+
+
+            return true;
         }
 
         /// <summary>
@@ -100,19 +173,63 @@ namespace Sudoku
         public List<int> FindLegalDigits(int row, int col)
         {
             //Create list of all possible digits (1-9)
-
-            List<int> possibleNum = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            List<int> possibleNum = new List<int>();
+            List<int> possibleNumR = new List<int>();
+            List<int> possibleNumC = new List<int>();
+            List<int> possibleNumB = new List<int>();
 
             //Remove from the list all elements in the row
-            for (int i = 0; i <= FindLegalDigits.Count; i++)
+            for (int i = 0; i < 9; i++)
             {
-                FindLegalDigits(row, col).RemoveAll(FindLegalDigits[i]);
+                if (Board[row, i] == 0)
+                {
+                    break;
+                }
+                else if (Board[row, i] != i)
+                {
+                    possibleNumR.Add(Board[row, i]);
+                }
             }
+
             //Remove from the list all elements in the column
+            for (int i = 0; i < 9; i++)
+            {
+                if (Board[i, col] == 0)
+                {
+                    break;
+                }
+                else if (Board[i, col] != i)
+                {
+                    possibleNumC.Add(Board[row, i]);
+                }
+            }
 
             //remove from the list all elements in the box
+            for (int i = 0; i < 9; i++)
+            {
+                List<int> temp = new List<int>();
+                for (int j = i; j < length; j++)
+                {
+
+                }
+
+
+            }
+           
 
             //return the list
+            for (int i = 0; i < possibleNumC.Count; i++)
+            {
+                if (possibleNumR.Contains(possibleNumC[i]))
+                {
+                    if (possibleNumB.Contains(possibleNumC[i]))
+                    {
+                        possibleNum.Add(possibleNumC[i]);
+                    }
+                }
+            }
+
+            return possibleNum;
         }
 
         /// <summary>
@@ -120,42 +237,33 @@ namespace Sudoku
         /// </summary>
         public void PrintBoard()
         {
-            //Console.WriteLine("Y  1  2  3   4  5  6   7  8  9");
-            //Console.WriteLine("X  ---------------------------");
-            //for (int row = 0; row < 9; row++)
-            //{
-            //    if (row % 3 == 0 && row != 0)
-            //    {
-            //        Console.WriteLine("  ---------+---------+---------");
-            //    }
-            //    Console.Write(row + 1 + "|");
-            //    for(int col = 0; col < 9; col++)
-            //    {
-            //        if (col % 3 == 0 && col != 0)
-            //        {
-            //            Console.Write("|");
-            //        }
-            //        if (mrr == row && mrc == col)
-            //        {
-            //            Console.ForegroundColor = ConsoleColor.Cyan;
-            //        }
-            //        else if (userChangedColors[row, col] == 1)
-            //        {
-            //            Console.ForegroundColor = ConsoleColor.Green;
-            //        }
-            //        Console.Write(" " + Board[row, col] + " ");
-            //        Console.ResetColor();
-            //    }
-            //    Console.WriteLine();
-            //}
-
-            string path3 = AppDomain.CurrentDomain.BaseDirectory + @"HardPuzzles.txt";
-
-            using (StreamReader sr = new StreamReader(path3))
+            Console.WriteLine("Y  0  1  2   3  4  5   6  7  8");
+            Console.WriteLine("X  ---------------------------");
+            for (int row = 0; row < 9; row++)
             {
-                string line = sr.ReadLine();               
-                Console.Write(line);
-                
+                if (row % 3 == 0 && row != 0)
+                {
+                    Console.WriteLine("  ---------+---------+---------");
+                }
+                Console.Write(row + "|");
+                for (int col = 0; col < 9; col++)
+                {
+                    if (col % 3 == 0 && col != 0)
+                    {
+                        Console.Write("|");
+                    }
+                    if (mrr == row && mrc == col)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                    }
+                    else if (userChangedColors[row, col] == 1)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    }
+                    Console.Write(" " + Board[row, col] + " ");
+                    Console.ResetColor();
+                }
+                Console.WriteLine();
             }
         }
 
@@ -169,7 +277,7 @@ namespace Sudoku
         public bool PlaceValue(int val, int row, int col)
         {
             //if any argument is outside of the range 0-8, return false
-            if (val < 1 || val > 9 || row < 0 || row > 8 || col < 0 || col > 8)
+            if (val < 0 || val > 8 || row < 0 || row > 8 || col < 0 || col > 8)
                 return false;
 
             mrr = row;
