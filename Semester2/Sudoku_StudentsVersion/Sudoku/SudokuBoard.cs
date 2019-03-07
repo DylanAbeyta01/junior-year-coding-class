@@ -93,8 +93,7 @@ namespace Sudoku
                 {
                     if (Board[i, j] == '0')
                     {
-                        verify = false;
-                        return verify;
+                        return false;
                     }
                 }
             }
@@ -106,7 +105,6 @@ namespace Sudoku
                 for (int j = 0; j < 9; j++)
                 {
                     Num.Add(Board[k, j]);
-
                 }
                 Num = Num.OrderBy(t => t).ToList();
 
@@ -129,7 +127,6 @@ namespace Sudoku
                 for (int j = 0; j < 9; j++)
                 {
                     Num.Add(Board[j, k]);
-
                 }
                 Num = Num.OrderBy(t => t).ToList();
 
@@ -145,8 +142,30 @@ namespace Sudoku
                 }
             }
 
-            //Check all boxes in the board, make sure they contain ONLY values 1-9. No duplicates, no exclusions
+            //Check all boxes in the board, make sure they contain ONLY values 1-9. No duplicates, no exclusions        
+            for (int i = 0; i < 3; i++)
+            {
+                for (int l = 0; l < 3; l++)
+                {
+                    Num.Clear();
+                    for (int j = i - (i % 3); j < i - (i % 3) + 3; j++)
+                    {
+                        for (int k = l - (l % 3); k < l - (l % 3) + 3; k++)
+                        {
+                            Num.Add(Board[i, l]);
+                            Num = Num.OrderBy(t => t).ToList();
 
+                            for (int m = 1; m <= 9; m++)
+                            {
+                                if (Board[i, m] != i)
+                                {
+                                    return false;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
             return true;
         }
@@ -173,62 +192,30 @@ namespace Sudoku
         public List<int> FindLegalDigits(int row, int col)
         {
             //Create list of all possible digits (1-9)
-            List<int> possibleNum = new List<int>();
-            List<int> possibleNumR = new List<int>();
-            List<int> possibleNumC = new List<int>();
-            List<int> possibleNumB = new List<int>();
+            List<int> possibleNum = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
             //Remove from the list all elements in the row
             for (int i = 0; i < 9; i++)
             {
-                if (Board[row, i] == 0)
-                {
-                    break;
-                }
-                else if (Board[row, i] != i)
-                {
-                    possibleNumR.Add(Board[row, i]);
-                }
+                possibleNum.Remove(Board[row, i]);
             }
 
             //Remove from the list all elements in the column
             for (int i = 0; i < 9; i++)
             {
-                if (Board[i, col] == 0)
-                {
-                    break;
-                }
-                else if (Board[i, col] != i)
-                {
-                    possibleNumC.Add(Board[row, i]);
-                }
+                possibleNum.Remove(Board[i, col]);
             }
 
             //remove from the list all elements in the box
-            for (int i = 0; i < 9; i++)
+            for (int j = row - (row % 3); j < row - (row % 3) + 3; j++)
             {
-                List<int> temp = new List<int>();
-                for (int j = i; j < length; j++)
+                for (int k = col - (col % 3); k < col - (col % 3) + 3; k++)
                 {
-
-                }
-
-
-            }
-           
-
-            //return the list
-            for (int i = 0; i < possibleNumC.Count; i++)
-            {
-                if (possibleNumR.Contains(possibleNumC[i]))
-                {
-                    if (possibleNumB.Contains(possibleNumC[i]))
-                    {
-                        possibleNum.Add(possibleNumC[i]);
-                    }
+                    possibleNum.Remove(Board[j, k]);
                 }
             }
 
+            //return the list           
             return possibleNum;
         }
 
@@ -288,6 +275,11 @@ namespace Sudoku
             //Apply the value
             Board[row, col] = val;
             return true;
+        }
+
+        public SudokuBoard(SudokuBoard board)
+        {
+            Array.Copy(board.Board, this.Board, this.Board.Length);
         }
     }
 }

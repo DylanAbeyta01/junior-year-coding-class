@@ -10,6 +10,8 @@ namespace Sudoku
     {
         List<T> queue = new List<T>();
 
+        public int Count { get { return queue.Count; } }
+
         static int timesEnqueued = 0;
         static int timesDequeued = 0;
         static int maxAmount = 0;
