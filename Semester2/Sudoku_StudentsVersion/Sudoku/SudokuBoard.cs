@@ -9,6 +9,8 @@ namespace Sudoku
 {
     public class SudokuBoard
     {
+        int counter = 0;
+
         List<string> boards = new List<string>();
         string newBoard;
         /// <summary>
@@ -20,7 +22,7 @@ namespace Sudoku
         /// <summary>
         /// The data structure used to hold board data.
         /// </summary>
-        public int[,] Board { get; set; }
+        public int[,] Board { get; set; } = new int[9, 9];
 
         /// <summary>
         /// Defualt constructor for a sudokuboard. Randomly generates solvable boards.
@@ -61,8 +63,16 @@ namespace Sudoku
                     boards.Add(line);
                 }
                 Random rand = new Random();
-                newBoard = boards[rand.Next(0, 95)];
-                PrintBoard();
+                newBoard = boards[rand.Next(0, boards.Count)];
+                int index = 0;
+                for (int i = 0; i <  9; i++)
+                {
+                    for (int j = 0; j < 9; j++)
+                    {
+                        Board[i, j] = int.Parse(newBoard[index].ToString());
+                        index++;
+                    }                   
+                }              
             }
         }
 
@@ -85,14 +95,13 @@ namespace Sudoku
         {
             List<int> Num = new List<int>();
 
-            bool verify = true;
-
             for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)
                 {
-                    if (Board[i, j] == '0')
+                    if (Board[i, j] == 0)
                     {
+                        Console.WriteLine("1");
                         return false;
                     }
                 }
@@ -112,8 +121,9 @@ namespace Sudoku
                 {
                     for (int i = 1; i <= 9; i++)
                     {
-                        if (Board[k, j] != i)
+                        if (Board[k, j] == i)
                         {
+                            Console.WriteLine("2");
                             return false;
                         }
                     }
@@ -134,8 +144,9 @@ namespace Sudoku
                 {
                     for (int i = 1; i <= 9; i++)
                     {
-                        if (Board[j, k] != i)
+                        if (Board[j, k] == i)
                         {
+                            Console.WriteLine("3");
                             return false;
                         }
                     }
@@ -159,6 +170,7 @@ namespace Sudoku
                             {
                                 if (Board[i, m] != i)
                                 {
+                                    Console.WriteLine("4");
                                     return false;
                                 }
                             }
@@ -223,7 +235,7 @@ namespace Sudoku
         /// Prints out the sudoku board in an easily understandable way
         /// </summary>
         public void PrintBoard()
-        {
+        {            
             Console.WriteLine("Y  0  1  2   3  4  5   6  7  8");
             Console.WriteLine("X  ---------------------------");
             for (int row = 0; row < 9; row++)
@@ -251,6 +263,7 @@ namespace Sudoku
                     Console.ResetColor();
                 }
                 Console.WriteLine();
+                counter = 0;
             }
         }
 
