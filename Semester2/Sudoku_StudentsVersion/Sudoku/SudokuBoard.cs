@@ -65,18 +65,21 @@ namespace Sudoku
                 Random rand = new Random();
                 newBoard = boards[rand.Next(0, boards.Count)];
                 int index = 0;
-                for (int i = 0; i <  9; i++)
+                for (int i = 0; i < 9; i++)
                 {
                     for (int j = 0; j < 9; j++)
                     {
                         Board[i, j] = int.Parse(newBoard[index].ToString());
                         index++;
-                    }                   
-                }              
+                    }
+                }
             }
         }
 
-
+        public SudokuBoard (SudokuBoard board)
+        {
+            Array.Copy(board.Board, this.Board, this.Board.Length);
+        }
         /// <summary>
         /// Checks the entire board to see if it is valid or not.
         /// First, if ANY element in the board is empty (0) then the board is invalid.
@@ -101,7 +104,6 @@ namespace Sudoku
                 {
                     if (Board[i, j] == 0)
                     {
-                        Console.WriteLine("1");
                         return false;
                     }
                 }
@@ -113,19 +115,15 @@ namespace Sudoku
                 Num.Clear();
                 for (int j = 0; j < 9; j++)
                 {
-                    Num.Add(Board[k, j]);
+                    Num.Add(Board[j, k]);
                 }
                 Num = Num.OrderBy(t => t).ToList();
 
-                for (int j = 0; j < 9; j++)
+                for (int j = 1; j < 9; j++)
                 {
-                    for (int i = 1; i <= 9; i++)
+                    if (!Num.Contains(j))
                     {
-                        if (Board[k, j] == i)
-                        {
-                            Console.WriteLine("2");
-                            return false;
-                        }
+                        return false;
                     }
                 }
             }
@@ -136,19 +134,15 @@ namespace Sudoku
                 Num.Clear();
                 for (int j = 0; j < 9; j++)
                 {
-                    Num.Add(Board[j, k]);
+                    Num.Add(Board[k, j]);
                 }
                 Num = Num.OrderBy(t => t).ToList();
 
-                for (int j = 0; j < 9; j++)
+                for (int j = 1; j < 9; j++)
                 {
-                    for (int i = 1; i <= 9; i++)
+                    if (!Num.Contains(j))
                     {
-                        if (Board[j, k] == i)
-                        {
-                            Console.WriteLine("3");
-                            return false;
-                        }
+                        return false;
                     }
                 }
             }
@@ -159,23 +153,22 @@ namespace Sudoku
                 for (int l = 0; l < 3; l++)
                 {
                     Num.Clear();
-                    for (int j = i - (i % 3); j < i - (i % 3) + 3; j++)
+                    for (int j = 0; j < 3; j++)
                     {
-                        for (int k = l - (l % 3); k < l - (l % 3) + 3; k++)
+                        for (int k = 0; k < 3; k++)
                         {
-                            Num.Add(Board[i, l]);
-                            Num = Num.OrderBy(t => t).ToList();
-
-                            for (int m = 1; m <= 9; m++)
-                            {
-                                if (Board[i, m] != i)
-                                {
-                                    Console.WriteLine("4");
-                                    return false;
-                                }
-                            }
+                            Num.Add(Board[j + i * 3, k + l * 3]);
                         }
                     }
+                    for (int m = 1; m <= 9; m++)
+                    {
+                        if (!Num.Contains(m))
+                        {
+                            return false;
+                        }
+                    }
+
+
                 }
             }
 
@@ -235,7 +228,7 @@ namespace Sudoku
         /// Prints out the sudoku board in an easily understandable way
         /// </summary>
         public void PrintBoard()
-        {            
+        {
             Console.WriteLine("Y  0  1  2   3  4  5   6  7  8");
             Console.WriteLine("X  ---------------------------");
             for (int row = 0; row < 9; row++)
@@ -288,11 +281,6 @@ namespace Sudoku
             //Apply the value
             Board[row, col] = val;
             return true;
-        }
-
-        public SudokuBoard(SudokuBoard board)
-        {
-            Array.Copy(board.Board, this.Board, this.Board.Length);
-        }
+        }       
     }
 }

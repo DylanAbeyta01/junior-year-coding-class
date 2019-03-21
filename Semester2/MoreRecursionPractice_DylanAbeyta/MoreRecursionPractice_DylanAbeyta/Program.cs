@@ -11,18 +11,21 @@ namespace MoreRecursionPractice_DylanAbeyta
         static Random rand = new Random(1234);
         static void Main(string[] args)
         {
+            bool result = true;
             List<int> integers = new List<int>();
-            for (int i = 0; 1 < 1000; i++)
-            {
+            for (int i = 0; i < 1000; i++)
                 integers.Add(rand.Next(0, 1000));
-                integers.Sort();
-                bool result = SearchIntList(integers, 0);
-            }
+
+            integers.Sort();
+            result = SearchIntList(integers, 10);
+
+            Console.Write(result);
+            Console.ReadLine();
         }
 
         public static bool SearchIntList(List<int> integers, int n)
         {
-            return SearchIntListRecursive(integers, n, 0,  integers.Count - 1);
+            return SearchIntListRecursive(integers, n, 0, integers.Count - 1);
         }
 
         private static bool SearchIntListRecursive(List<int> integers, int n, int lowerBound, int upperBound)
@@ -30,19 +33,19 @@ namespace MoreRecursionPractice_DylanAbeyta
             if (lowerBound == upperBound)
                 return false;
 
-            int midpoint = upperBound / 2;
+            int midpoint = ((upperBound - lowerBound) / 2) + lowerBound;
 
             if (integers[midpoint] == n)
                 return true;
 
-            if (lowerBound + 1 == upperBound || lowerBound - 1 == upperBound)
+            if (lowerBound + 1 == upperBound)
                 return false;
 
             if (integers[midpoint] > n)
-                SearchIntListRecursive(integers, n, lowerBound, midpoint);
-
-            if (integers[midpoint] > n)
-                SearchIntListRecursive(integers, n, midpoint, upperBound);
+                return SearchIntListRecursive(integers, n, lowerBound, midpoint);
+            
+            if (integers[midpoint] < n)
+                return SearchIntListRecursive(integers, n, midpoint, upperBound);
 
             return false;
         }

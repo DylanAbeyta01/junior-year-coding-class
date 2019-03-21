@@ -8,6 +8,8 @@ namespace Sudoku
 {
     class Queue<T>
     {
+
+        List<int> holder = new List<int>();
         List<T> queue = new List<T>();
 
         public int Count { get { return queue.Count; } }
@@ -55,6 +57,18 @@ namespace Sudoku
         public T Peek()
         {
             return queue[queue.Count - 1];
+        }
+
+        public T Pop()
+        {         
+            T temp = queue[queue.Count - 1];
+            queue.RemoveAt(queue.Count - 1);
+            return temp;
+        }
+
+        public void Push(T val)
+        {
+            queue.Add(val);
         }
     }
 }
