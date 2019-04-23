@@ -11,7 +11,7 @@ namespace BinaryTree_DylanAbeyta
         private Node Root { get; set; }
         public int Height;
         public int Count;
-        
+
         public void Print()
         {
             BinaryTreePrinter.printNode(Root);
@@ -32,7 +32,7 @@ namespace BinaryTree_DylanAbeyta
         }
         private void Insert(Node n, char c)
         {
-            if (c >=  n.Value && n.RightChild == null)
+            if (c >= n.Value && n.RightChild == null)
             {
                 n.RightChild = new Node(c);
                 return;
@@ -56,25 +56,69 @@ namespace BinaryTree_DylanAbeyta
 
 
         }
-        public bool Remove(char c)
-        {
-            throw new NotImplementedException();
 
-        }
-        private bool Remove(Node n, char c)
+        public void Remove(char c)
         {
-            throw new NotImplementedException();
+            if (Root == null)
+            {
+                return;
+            }
 
+            else
+                Remove(Root, c);
         }
+
+        private Node Remove(Node n, char c)
+        {
+            if (n.RightChild != null && c > n.Value)            
+                Remove(n.RightChild, c);
+            
+            if (n.LeftChild != null && c < n.Value)           
+                Remove(n.LeftChild, c);
+             
+            if (n.LeftChild == null)
+                return n.RightChild;
+            else if (n.RightChild == null)
+                return n.LeftChild;
+
+            if (c == n.Value)
+            {
+                char min = 'k';
+                while (n.LeftChild != null)
+                {
+                    min = n.LeftChild.Value;
+                    n = n.LeftChild;
+                }
+            }          
+        }
+
         public bool Search(char c)
         {
-
-            throw new NotImplementedException();
-
+            if (Root.Value == c)
+            {
+                return true;
+            }
+            else
+                return Search(Root, c);
         }
         private bool Search(Node n, char c)
         {
-            throw new NotImplementedException();
+            if (n.RightChild != null && c > n.Value)
+            {
+                return Search(n.RightChild, c);
+            }
+
+            if (n.LeftChild != null && c < n.Value)
+            {
+                return Search(n.LeftChild, c);
+            }
+
+            if (c == n.Value)
+            {
+                return true;
+            }
+            else
+                return false;
         }
         public void Balance()
         {
@@ -83,11 +127,11 @@ namespace BinaryTree_DylanAbeyta
         public void PreOrderPrint()
         {
 
-        }       
+        }
         private void PreOrderPrint(Node n)
         {
 
-        }             
+        }
         public void InorderPrint()
         {
 
@@ -105,5 +149,5 @@ namespace BinaryTree_DylanAbeyta
 
         }
     }
-    
+
 }
