@@ -14,14 +14,7 @@ namespace BinaryTree_DylanAbeyta
             bool doesExists = false;
             BinaryTree bt = new BinaryTree();           
             bt.Insert('o');
-            bt.Insert('c');
-            bt.Insert('p');
-            bt.Insert('f');
-            bt.Insert('t');
-            bt.Insert('j');
-            bt.Insert('k');
-            bt.Insert('i');
-            bt.Insert('s');
+            bt.Insert('c');        
             bt.Insert('q');
             bt.Insert('w');
             bt.Insert('z');
@@ -33,15 +26,19 @@ namespace BinaryTree_DylanAbeyta
                 Console.WriteLine("1) Search");
                 Console.WriteLine("2) Remove");
                 Console.WriteLine("3) Insert");
+                Console.WriteLine("4) PreOrderPrint");
+                Console.WriteLine("5) InOrderPrint");
+                Console.WriteLine("6) PostOrderPrint");
+
+
+
                 input = int.Parse(Console.ReadLine());
 
                 if (input == 1)
                 {
                     Console.WriteLine("Enter a letter to search for");
                     char SLet = char.Parse(Console.ReadLine());
-                    Console.WriteLine(bt.Search(SLet));
-                    
-
+                    Console.WriteLine(bt.Search(SLet));                   
                 }
 
                 if (input == 2)
@@ -53,14 +50,36 @@ namespace BinaryTree_DylanAbeyta
                     if (doesExists == true)
                     {
                         bt.Remove(SLet);
+                        bt.Print();
                     }
                 }
 
                 if (input == 3)
                 {
                     Console.WriteLine("Enter a letter to insert");
+                    char insert = char.Parse(Console.ReadLine());
+                    bt.Insert(insert);
+                    bt.Print();
                 }
-            } while (input != 5);
+
+                if (input == 4)
+                {
+                    bt.PreOrderPrint();
+                    Console.WriteLine();
+                }
+
+                if (input == 5)
+                {
+                    bt.InorderPrint();
+                    Console.WriteLine();
+                }
+
+                if (input == 6)
+                {
+                    bt.PostOrderPrint();
+                    Console.WriteLine();
+                }
+            } while (input != 7);
            
             Console.ReadKey();
         //https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/

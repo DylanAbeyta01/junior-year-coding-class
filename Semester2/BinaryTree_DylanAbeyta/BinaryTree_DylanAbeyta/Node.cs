@@ -33,6 +33,7 @@ namespace BinaryTree_DylanAbeyta
                 else
                     return RightTreeHeight;
             }
+            
         }
 
         public Node(char Val)

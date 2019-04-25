@@ -9,7 +9,7 @@ namespace BinaryTree_DylanAbeyta
     class BinaryTree
     {
         private Node Root { get; set; }
-        public int Height;
+        public int Height { get { return Root.Height; } }
         public int Count;
 
         public void Print()
@@ -70,26 +70,30 @@ namespace BinaryTree_DylanAbeyta
 
         private Node Remove(Node n, char c)
         {
-            if (n.RightChild != null && c > n.Value)            
+            if (n.RightChild != null && c > n.Value)
                 Remove(n.RightChild, c);
-            
-            if (n.LeftChild != null && c < n.Value)           
-                Remove(n.LeftChild, c);
-             
-            if (n.LeftChild == null)
-                return n.RightChild;
-            else if (n.RightChild == null)
-                return n.LeftChild;
 
-            if (c == n.Value)
+            else if (n.LeftChild != null && c < n.Value)
+                Remove(n.LeftChild, c);
+            else
             {
-                char min = 'k';
-                while (n.LeftChild != null)
+                if (n.LeftChild == null)
+                    return n.RightChild;
+                else if (n.RightChild == null)
+                    return n.LeftChild;
+
+                if (c == n.Value)
                 {
-                    min = n.LeftChild.Value;
-                    n = n.LeftChild;
+                    char min = 'k';
+                    while (n.LeftChild != null)
+                    {
+                        min = n.LeftChild.Value;
+                        n = n.LeftChild;
+                    }
                 }
-            }          
+
+            }
+            return n;
         }
 
         public bool Search(char c)
@@ -98,6 +102,7 @@ namespace BinaryTree_DylanAbeyta
             {
                 return true;
             }
+
             else
                 return Search(Root, c);
         }
@@ -126,26 +131,59 @@ namespace BinaryTree_DylanAbeyta
         }
         public void PreOrderPrint()
         {
-
+            PreOrderPrint(Root);
         }
         private void PreOrderPrint(Node n)
         {
+            Console.Write(n.Value + ", ");
 
+            if (n.LeftChild != null)
+            {               
+                PreOrderPrint(n.LeftChild);
+            }
+
+            if (n.RightChild != null)
+            {
+                PreOrderPrint(n.RightChild);
+            }
         }
         public void InorderPrint()
         {
-
+            InOrderPrint(Root);
         }
         private void InOrderPrint(Node n)
         {
+            if (n.LeftChild != null)
+            {
+                InOrderPrint(n.LeftChild);
+            }
 
+            Console.Write(n.Value + ", ");
+
+            if (n.RightChild != null)
+            {
+                InOrderPrint(n.RightChild);
+            }
         }
+
         public void PostOrderPrint()
         {
-
+            PostOrderprint(Root);
         }
+
         private void PostOrderprint(Node n)
         {
+            if (n.LeftChild != null)
+            {
+                PostOrderprint(n.LeftChild);
+            }
+
+            if (n.RightChild != null)
+            {
+                PostOrderprint(n.RightChild);
+            }
+
+            Console.Write(n.Value + ", ");
 
         }
     }
