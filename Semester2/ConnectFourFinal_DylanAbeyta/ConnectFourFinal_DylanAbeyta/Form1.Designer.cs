@@ -66,6 +66,7 @@
             this.pictureBo11 = new System.Windows.Forms.PictureBox();
             this.pictureBo6 = new System.Windows.Forms.PictureBox();
             this.pictureBo1 = new System.Windows.Forms.PictureBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBo5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBo4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBo2)).BeginInit();
@@ -413,11 +414,19 @@
             this.pictureBo1.TabIndex = 32;
             this.pictureBo1.TabStop = false;
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(279, 396);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(219, 20);
+            this.textBox3.TabIndex = 38;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.pictureBo26);
             this.Controls.Add(this.pictureBo21);
             this.Controls.Add(this.pictureBo16);
@@ -533,6 +542,7 @@
         private System.Windows.Forms.PictureBox pictureBo11;
         private System.Windows.Forms.PictureBox pictureBo6;
         private System.Windows.Forms.PictureBox pictureBo1;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 

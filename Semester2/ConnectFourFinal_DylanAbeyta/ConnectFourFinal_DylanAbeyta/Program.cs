@@ -17,6 +17,9 @@ namespace ConnectFourFinal_DylanAbeyta
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            Form1 newthing = new Form1();
+
         }
     }
 }
