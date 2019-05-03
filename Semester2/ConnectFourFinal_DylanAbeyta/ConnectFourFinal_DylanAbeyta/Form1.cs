@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,9 +17,11 @@ namespace ConnectFourFinal_DylanAbeyta
         int player2score = 0;
         int player1 = 1;
         int player2 = 0;
-        bool ifWon = false;
+        bool ifWon = false;    
         List<int> Player1 = new List<int>();
         List<int> Player2 = new List<int>();
+        List<int> Player1Temp = new List<int>();
+        List<int> Player2Temp = new List<int>();
 
         public Form1()
         {
@@ -539,73 +542,169 @@ namespace ConnectFourFinal_DylanAbeyta
             {
                 if (Player1.Contains(Player1[k] + 1) && Player1.Contains(Player1[k] + 2) && Player1.Contains(Player1[k] + 3))
                 {
+                    textBox4.Text = "Vertical Win";
                     return true;
                 }
 
                 if (Player1.Contains(Player1[k] + 5) && Player1.Contains(Player1[k] + 10) && Player1.Contains(Player1[k] + 15))
                 {
+                    textBox4.Text = "Horizontal Win";
                     return true;
                 }
 
                 if (Player1.Contains(Player1[k] + 6) && Player1.Contains(Player1[k] + 12) && Player1.Contains(Player1[k] + 18))
                 {
+                    textBox4.Text = "Diagonal Win";
                     return true;
                 }
 
-                if (Player1.Contains(Player1[k] + 4) && Player1.Contains(Player1[k] + 8) && Player1.Contains(Player1[k] + 12))
+                if (Player1[k] == 4 || Player1[k] == 5 || Player1[k] == 9 || Player1[k] == 10 || Player1[k] == 14 || Player1[k] == 15 ||
+                    Player1[k] == 19 || Player1[k] == 20 || Player1[k] == 24 || Player1[k] == 25 || Player1[k] == 29 || Player1[k] == 30)                    
                 {
-                    if (Player1[k] != 1 && k != 2 && k != 3 && k != 6 && k != 7 && k != 8 && k != 11 && k != 12 && k != 13 &&
-                    k != 16 && k != 17 && k != 18 && k != 21 && k != 22 && k != 23 && k != 26 && k != 27 && k != 28)
+                    if (Player1.Contains(Player1[k] + 4) && Player1.Contains(Player1[k] + 8) && Player1.Contains(Player1[k] + 12))
                     {
-                        return true;
+                        textBox4.Text = "Diagonal Win";
+                        return true;                        
                     }
                 }
             }
-            Player1.Co
+
             for (int k = 0; k < Player2.Count; k++)
             {
                 if (Player2.Contains(Player2[k] + 1) && Player2.Contains(Player2[k] + 2) && Player2.Contains(Player2[k] + 3))
                 {
+                    textBox4.Text = "Vertical Win";
                     return true;
                 }
 
                 if (Player2.Contains(Player2[k] + 5) && Player2.Contains(Player2[k] + 10) && Player2.Contains(Player2[k] + 15))
                 {
+                    textBox4.Text = "Horizontal Win";
                     return true;
                 }
 
                 if (Player2.Contains(Player2[k] + 6) && Player2.Contains(Player2[k] + 12) && Player2.Contains(Player2[k] + 18))
                 {
+                    textBox4.Text = "Diagonal Win";
                     return true;
                 }
 
-                if (Player2.Contains(Player2[k] + 4) && Player2.Contains(Player2[k] + 8) && Player2.Contains(Player2[k] + 12))
+                if (Player2[k] == 4 || Player2[k] == 5 || Player2[k] == 9 || Player2[k] == 10 || Player2[k] == 14 || Player2[k] == 15 ||
+                    Player2[k] == 19 || Player2[k] == 20 || Player2[k] == 24 || Player2[k] == 25 || Player2[k] == 29 || Player2[k] == 30)
                 {
-                    return true;
+                    if (Player2.Contains(Player2[k] + 4) && Player2.Contains(Player2[k] + 8) && Player2.Contains(Player2[k] + 12))
+                    {
+                        textBox4.Text = "Diagonal Win";
+                        return true;
+                    }
                 }
             }
-
-            
-
-
+          
             return false;
         }
 
         public void testrun()
         {
             if (ifWon == true)
-            {
+            {              
                 if (player1 == 1)
                 {
                     textBox3.Text = "Congratulations Player 2 has Won";
+                    player2score++;
+                    textBox2.Text = "Player 2 Wins: " + player2score;
                     player1 = 0;
                 }
                 else
                 {
                     textBox3.Text = "Congratulations Player 1 has Won";
+                    player1score++;
+                    textBox1.Text = "Player 1 Win: " + player1score;
                     player2 = 0;
                 }
+                Update();
+                Thread.Sleep(5000);
+                Reset();
             }
         }
+
+        public void Reset()
+        {
+            pictureBo1.BackColor = Color.Transparent;
+            pictureBo2.BackColor = Color.Transparent;
+            pictureBo3.BackColor = Color.Transparent;
+            pictureBo4.BackColor = Color.Transparent;
+            pictureBo5.BackColor = Color.Transparent;
+            pictureBo6.BackColor = Color.Transparent;
+            pictureBo7.BackColor = Color.Transparent;
+            pictureBo8.BackColor = Color.Transparent;
+            pictureBo9.BackColor = Color.Transparent;
+            pictureBo10.BackColor = Color.Transparent;
+            pictureBo11.BackColor = Color.Transparent;
+            pictureBo12.BackColor = Color.Transparent;
+            pictureBo13.BackColor = Color.Transparent;
+            pictureBo14.BackColor = Color.Transparent;
+            pictureBo15.BackColor = Color.Transparent;
+            pictureBo16.BackColor = Color.Transparent;
+            pictureBo17.BackColor = Color.Transparent;
+            pictureBo18.BackColor = Color.Transparent;
+            pictureBo19.BackColor = Color.Transparent;
+            pictureBo20.BackColor = Color.Transparent;
+            pictureBo21.BackColor = Color.Transparent;
+            pictureBo22.BackColor = Color.Transparent;
+            pictureBo23.BackColor = Color.Transparent;
+            pictureBo24.BackColor = Color.Transparent;
+            pictureBo25.BackColor = Color.Transparent;
+            pictureBo26.BackColor = Color.Transparent;
+            pictureBo27.BackColor = Color.Transparent;
+            pictureBo28.BackColor = Color.Transparent;
+            pictureBo29.BackColor = Color.Transparent;
+            pictureBo30.BackColor = Color.Transparent;
+
+            player1 = 1;
+            ifWon = false;
+            Player1.Clear();
+            Player2.Clear();
+            textBox3.Text = " ";
+            textBox4.Text = " ";
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            pictureBo1.BackColor = Color.Transparent;
+            pictureBo2.BackColor = Color.Transparent;
+            pictureBo3.BackColor = Color.Transparent;
+            pictureBo4.BackColor = Color.Transparent;
+            pictureBo5.BackColor = Color.Transparent;
+            pictureBo6.BackColor = Color.Transparent;
+            pictureBo7.BackColor = Color.Transparent;
+            pictureBo8.BackColor = Color.Transparent;
+            pictureBo9.BackColor = Color.Transparent;
+            pictureBo10.BackColor = Color.Transparent;
+            pictureBo11.BackColor = Color.Transparent;
+            pictureBo12.BackColor = Color.Transparent;
+            pictureBo13.BackColor = Color.Transparent;
+            pictureBo14.BackColor = Color.Transparent;
+            pictureBo15.BackColor = Color.Transparent;
+            pictureBo16.BackColor = Color.Transparent;
+            pictureBo17.BackColor = Color.Transparent;
+            pictureBo18.BackColor = Color.Transparent;
+            pictureBo19.BackColor = Color.Transparent;
+            pictureBo20.BackColor = Color.Transparent;
+            pictureBo21.BackColor = Color.Transparent;
+            pictureBo22.BackColor = Color.Transparent;
+            pictureBo23.BackColor = Color.Transparent;
+            pictureBo24.BackColor = Color.Transparent;
+            pictureBo25.BackColor = Color.Transparent;
+            pictureBo26.BackColor = Color.Transparent;
+            pictureBo27.BackColor = Color.Transparent;
+            pictureBo28.BackColor = Color.Transparent;
+            pictureBo29.BackColor = Color.Transparent;
+            pictureBo30.BackColor = Color.Transparent;
+
+            player1 = 1;
+            ifWon = false;
+            Player1.Clear();
+            Player2.Clear();
+        }      
     }
 }

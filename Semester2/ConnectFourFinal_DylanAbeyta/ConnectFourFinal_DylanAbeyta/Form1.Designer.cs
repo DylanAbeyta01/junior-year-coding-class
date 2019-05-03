@@ -67,6 +67,8 @@
             this.pictureBo6 = new System.Windows.Forms.PictureBox();
             this.pictureBo1 = new System.Windows.Forms.PictureBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBo5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBo4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBo2)).BeginInit();
@@ -421,11 +423,30 @@
             this.textBox3.Size = new System.Drawing.Size(219, 20);
             this.textBox3.TabIndex = 38;
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(702, 12);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 39;
+            this.button7.Text = "Restart";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(279, 12);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(219, 20);
+            this.textBox4.TabIndex = 40;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.pictureBo26);
             this.Controls.Add(this.pictureBo21);
@@ -543,6 +564,8 @@
         private System.Windows.Forms.PictureBox pictureBo6;
         private System.Windows.Forms.PictureBox pictureBo1;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
 
