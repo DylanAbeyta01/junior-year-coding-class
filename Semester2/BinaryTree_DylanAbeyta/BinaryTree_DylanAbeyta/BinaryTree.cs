@@ -71,7 +71,7 @@ namespace BinaryTree_DylanAbeyta
                 n.LeftChild = Remove(n.LeftChild, c);
 
             else if (c > n.Value)
-                n. RightChild = Remove(n.RightChild, c);
+                n.RightChild = Remove(n.RightChild, c);
 
             else
             {

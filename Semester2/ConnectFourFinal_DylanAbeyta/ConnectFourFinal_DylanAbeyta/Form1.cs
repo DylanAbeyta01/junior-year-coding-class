@@ -26,8 +26,10 @@ namespace ConnectFourFinal_DylanAbeyta
         public Form1()
         {
             InitializeComponent();
-            textBox1.Text = ("Player 1 Wins: " + player1score);
-            textBox2.Text = ("Player 2 Wins: " + player2score);
+            textBox1.Text = textBox6.Text + " Wins: " + player1score;
+            textBox2.Text = textBox7.Text + " Wins: " + player2score;
+            textBox8.Text = "Enter Player 1's name in the box to the right";
+            textBox9.Text = "Enter Player 2's name in the box to the right";
 
         }
 
@@ -72,6 +74,7 @@ namespace ConnectFourFinal_DylanAbeyta
                 }
                 ifWon = didWin();
                 testrun();
+                textBox5.Text = textBox7.Text + "'s turn";
             }
             else if (player2 == 1)
             {
@@ -112,6 +115,7 @@ namespace ConnectFourFinal_DylanAbeyta
                 }
                 ifWon = didWin();
                 testrun();
+                textBox5.Text = textBox6.Text + "'s turn";
             }
         }
 
@@ -156,6 +160,7 @@ namespace ConnectFourFinal_DylanAbeyta
                 }
                 ifWon = didWin();
                 testrun();
+                textBox5.Text = textBox7.Text + "'s turn";
             }
             else if (player2 == 1)
             {
@@ -196,6 +201,7 @@ namespace ConnectFourFinal_DylanAbeyta
                 }
                 ifWon = didWin();
                 testrun();
+                textBox5.Text = textBox6.Text + "'s turn";
             }
         }
 
@@ -240,6 +246,7 @@ namespace ConnectFourFinal_DylanAbeyta
                 }
                 ifWon = didWin();
                 testrun();
+                textBox5.Text = textBox7.Text + "'s turn";
             }
             else if (player2 == 1)
             {
@@ -280,6 +287,7 @@ namespace ConnectFourFinal_DylanAbeyta
                 }
                 ifWon = didWin();
                 testrun();
+                textBox5.Text = textBox6.Text + "'s turn";
             }
         }
 
@@ -324,6 +332,7 @@ namespace ConnectFourFinal_DylanAbeyta
                 }
                 ifWon = didWin();
                 testrun();
+                textBox5.Text = textBox7.Text + "'s turn";
             }
             else if (player2 == 1)
             {
@@ -364,6 +373,7 @@ namespace ConnectFourFinal_DylanAbeyta
                 }
                 ifWon = didWin();
                 testrun();
+                textBox5.Text = textBox6.Text + "'s turn";
             }
         }
 
@@ -375,7 +385,7 @@ namespace ConnectFourFinal_DylanAbeyta
                 {
                     pictureBo21.BackColor = Color.Blue;
                     Player1.Add(21);
-                    player1 = 0;
+                    player1 = 0;                    
                     player2++;
                 }
                 else if (pictureBo22.BackColor != Color.Blue && pictureBo22.BackColor != Color.Red)
@@ -408,6 +418,7 @@ namespace ConnectFourFinal_DylanAbeyta
                 }
                 ifWon = didWin();
                 testrun();
+                textBox5.Text = textBox7.Text + "'s turn";
             }
             else if (player2 == 1)
             {
@@ -448,6 +459,7 @@ namespace ConnectFourFinal_DylanAbeyta
                 }
                 ifWon = didWin();
                 testrun();
+                textBox5.Text = textBox6.Text + "'s turn";
             }
         }
 
@@ -492,6 +504,7 @@ namespace ConnectFourFinal_DylanAbeyta
                 }
                 ifWon = didWin();
                 testrun();
+                textBox5.Text = textBox7.Text + "'s turn";
             }
             else if (player2 == 1)
             {
@@ -532,6 +545,7 @@ namespace ConnectFourFinal_DylanAbeyta
                 }
                 ifWon = didWin();
                 testrun();
+                textBox5.Text = textBox6.Text + "'s turn";
             }
         }
 
@@ -609,16 +623,16 @@ namespace ConnectFourFinal_DylanAbeyta
             {              
                 if (player1 == 1)
                 {
-                    textBox3.Text = "Congratulations Player 2 has Won";
+                    textBox3.Text = "Congratulations " + textBox7.Text + " has Won";
                     player2score++;
-                    textBox2.Text = "Player 2 Wins: " + player2score;
+                    textBox2.Text = textBox7.Text + " Wins: " + player2score;
                     player1 = 0;
                 }
                 else
                 {
-                    textBox3.Text = "Congratulations Player 1 has Won";
+                    textBox3.Text = "Congratulations " + textBox6.Text + " has Won";
                     player1score++;
-                    textBox1.Text = "Player 1 Win: " + player1score;
+                    textBox1.Text = textBox6.Text + " Wins: " + player1score;
                     player2 = 0;
                 }
                 Update();
@@ -659,13 +673,14 @@ namespace ConnectFourFinal_DylanAbeyta
             pictureBo28.BackColor = Color.Transparent;
             pictureBo29.BackColor = Color.Transparent;
             pictureBo30.BackColor = Color.Transparent;
-
+           
             player1 = 1;
             ifWon = false;
             Player1.Clear();
             Player2.Clear();
             textBox3.Text = " ";
             textBox4.Text = " ";
+            textBox5.Text = " ";
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -705,6 +720,7 @@ namespace ConnectFourFinal_DylanAbeyta
             ifWon = false;
             Player1.Clear();
             Player2.Clear();
-        }      
+            textBox5.Text = " ";
+        }     
     }
 }
