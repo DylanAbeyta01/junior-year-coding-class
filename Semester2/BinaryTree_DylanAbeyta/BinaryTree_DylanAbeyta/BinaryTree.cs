@@ -53,28 +53,26 @@ namespace BinaryTree_DylanAbeyta
             {
                 Insert(n.LeftChild, c);
             }
-
-
         }
 
         public void Remove(char c)
         {
-            if (Root == null)
-            {
-                return;
-            }
-
-            else
-                Remove(Root, c);
+            Root = Remove(Root, c);
         }
 
         private Node Remove(Node n, char c)
         {
-            if (n.RightChild != null && c > n.Value)
-                Remove(n.RightChild, c);
+            if (n == null)
+            {
+                return n;
+            }
 
-            else if (n.LeftChild != null && c < n.Value)
-                Remove(n.LeftChild, c);
+            if (c < n.Value)
+                n.LeftChild = Remove(n.LeftChild, c);
+
+            else if (c > n.Value)
+                n. RightChild = Remove(n.RightChild, c);
+
             else
             {
                 if (n.LeftChild == null)
@@ -82,18 +80,22 @@ namespace BinaryTree_DylanAbeyta
                 else if (n.RightChild == null)
                     return n.LeftChild;
 
-                if (c == n.Value)
-                {
-                    char min = 'k';
-                    while (n.LeftChild != null)
-                    {
-                        min = n.LeftChild.Value;
-                        n = n.LeftChild;
-                    }
-                }
+                n.Value = MinValue(n.RightChild);
 
+                n.RightChild = Remove(n.RightChild, n.Value);
             }
             return n;
+        }
+
+        public char MinValue(Node n)
+        {
+            char min = n.Value;
+            while (n.LeftChild != null)
+            {
+                min = n.LeftChild.Value;
+                n = n.LeftChild;
+            }
+            return min;
         }
 
         public bool Search(char c)
@@ -138,7 +140,7 @@ namespace BinaryTree_DylanAbeyta
             Console.Write(n.Value + ", ");
 
             if (n.LeftChild != null)
-            {               
+            {
                 PreOrderPrint(n.LeftChild);
             }
 

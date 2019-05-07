@@ -19,6 +19,7 @@ namespace BinaryTree_DylanAbeyta
             bt.Insert('w');
             bt.Insert('z');
             bt.Insert('x');
+            bt.Insert('a');
             bt.Print();
 
             do
@@ -52,6 +53,8 @@ namespace BinaryTree_DylanAbeyta
                         bt.Remove(SLet);
                         bt.Print();
                     }
+                    else
+                        Console.WriteLine("This letter is not in the tree.");
                 }
 
                 if (input == 3)
