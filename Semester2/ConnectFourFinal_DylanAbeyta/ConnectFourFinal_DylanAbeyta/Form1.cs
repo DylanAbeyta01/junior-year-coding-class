@@ -22,7 +22,7 @@ namespace ConnectFourFinal_DylanAbeyta
         List<int> Player2 = new List<int>();
         List<int> Player1Temp = new List<int>();
         List<int> Player2Temp = new List<int>();
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace ConnectFourFinal_DylanAbeyta
             textBox8.Text = "Enter Player 1's name in the box to the right";
             textBox9.Text = "Enter Player 2's name in the box to the right";
 
-        }
+        }     
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -675,6 +675,7 @@ namespace ConnectFourFinal_DylanAbeyta
             pictureBo30.BackColor = Color.Transparent;
            
             player1 = 1;
+            player2 = 0;
             ifWon = false;
             Player1.Clear();
             Player2.Clear();
@@ -717,9 +718,12 @@ namespace ConnectFourFinal_DylanAbeyta
             pictureBo30.BackColor = Color.Transparent;
 
             player1 = 1;
+            player2 = 0;
             ifWon = false;
             Player1.Clear();
             Player2.Clear();
+            textBox3.Text = " ";
+            textBox4.Text = " ";
             textBox5.Text = " ";
         }     
     }
